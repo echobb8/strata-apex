@@ -1,0 +1,92 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "strata-apex/inkling-2-mini",
+  "provider": {
+    "strata-apex": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Strata Apex Local (Apple Silicon)",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1",
+        "apiKey": "strata-apex-local"
+      },
+      "models": {
+        "inkling-2-mini": {
+          "id": "inkling-2-mini",
+          "name": "Inkling-2-Mini (26B Looped Strata Apex)",
+          "tool_call": true,
+          "reasoning": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "low": { "reasoningEffort": "low" },
+            "medium": { "reasoningEffort": "medium" },
+            "high": { "reasoningEffort": "high" },
+            "xhigh": { "reasoningEffort": "xhigh" }
+          },
+          "limit": {
+            "context": 432768,
+            "output": 32768
+          }
+        },
+        "inkling-2-mini-norefusal": {
+          "id": "inkling-2-mini-norefusal",
+          "name": "Inkling-2-Mini No-Refusal (26B Strata Apex)",
+          "tool_call": true,
+          "reasoning": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "low": { "reasoningEffort": "low" },
+            "medium": { "reasoningEffort": "medium" },
+            "high": { "reasoningEffort": "high" },
+            "xhigh": { "reasoningEffort": "xhigh" }
+          },
+          "limit": {
+            "context": 432768,
+            "output": 32768
+          }
+        },
+        "qwen3.8-flash-next": {
+          "id": "qwen3.8-flash-next",
+          "name": "Qwen3.8-Flash-Next (180B Strata Apex)",
+          "tool_call": true,
+          "reasoning": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "low": { "reasoningEffort": "low" },
+            "medium": { "reasoningEffort": "medium" },
+            "high": { "reasoningEffort": "high" },
+            "xhigh": { "reasoningEffort": "xhigh" }
+          },
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          }
+        },
+        "glm-5.3-flash": {
+          "id": "glm-5.3-flash",
+          "name": "GLM-5.3-Flash (320B Strata Apex)",
+          "tool_call": true,
+          "reasoning": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "low": { "reasoningEffort": "low" },
+            "medium": { "reasoningEffort": "medium" },
+            "high": { "reasoningEffort": "high" },
+            "xhigh": { "reasoningEffort": "xhigh" }
+          },
+          "limit": {
+            "context": 131072,
+            "output": 32768
+          }
+        }
+      }
+    }
+  }
+}

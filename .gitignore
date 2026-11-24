@@ -1,0 +1,27 @@
+# Build & release artifacts
+build/
+dist/
+bench_data/
+
+# Local model weights & Metal shader caches
+*.strata
+*.safetensors
+*.metallib_bin
+*.strata_session
+
+# Scratch / eval outputs & logs
+*.log
+*.tmp
+.DS_Store
+evals/
+pocket-watch*.html
+pocket-watch*.md
+strata-m5-benchmark-card.png
+
+# Internal session handoffs & build logs (local-only)
+HANDOFF.md
+docs/HANDOFF.md
+docs/CONVERSATION_HISTORY.md
+docs/STRATA_M5_POC_WALKTHROUGH.md
+docs/STRATA_M5_REALTIME_COMPACTION.md
+docs/SWARM_RESEARCH_AND_BUILD_LOG.md
